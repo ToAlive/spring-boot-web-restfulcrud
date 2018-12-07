@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!--导入thymeleaf的名称空间-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>success</h1>
+    <!--讲div里面的内置设置为我们指定的值-->
+    <div th:text="${hello}"></div>
+<hr/>
+    <div th:utext="${helloHtml}"></div>
+<hr/>
+    <!--th:each每次遍历都会生成这个标签-->
+    <h4 th:text="${user}" th:each="user:${users}"></h4>
+<hr/>
+    <span th:each="user:${users}">[[${user}]]</span>
+</body>
+</html>
